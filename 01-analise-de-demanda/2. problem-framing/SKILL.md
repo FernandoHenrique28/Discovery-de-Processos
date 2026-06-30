@@ -79,9 +79,54 @@ Exemplo:
 > Causa raiz candidata: ausência de padronização na entrada do processo — não a falta de
 > validação automática. Automatizar a validação sem padronizar a entrada ataca o sintoma.
 
-### Passo 2 — Classificar o tipo de problema
+### Passo 2 — Testar hipóteses concorrentes
 
-Classificar a demanda em uma das categorias abaixo. A categoria muda a recomendação.
+A primeira causa raiz que os 5 Porquês entregam não deve ser aceita automaticamente. É comum
+parar na explicação mais óbvia, que nem sempre é a correta — isso é viés de ancoragem.
+
+Antes de seguir, formular **pelo menos duas hipóteses concorrentes** para a causa raiz, e
+deixar explícito o que falta para diferenciar entre elas.
+
+**Estrutura obrigatória:**
+
+```
+Hipótese 1: [causa raiz candidata, vinda dos 5 Porquês]
+Hipótese 2: [causa raiz alternativa — uma explicação diferente e plausível]
+Como validar: [o teste mínimo, pergunta ou dado que distingue entre as duas hipóteses]
+Qual evidência falta: [o que ainda não temos para confirmar qual hipótese é a correta]
+```
+
+**Exemplo — continuando o caso da conferência de documentos:**
+
+> Hipótese 1: Ausência de padronização na entrada do processo — o cliente não segue um
+> formato fixo de instrução, então cada operador interpreta do seu jeito.
+>
+> Hipótese 2: O time não tem ferramenta adequada para conferência — mesmo com instrução
+> padronizada, a conferência continuaria manual e sujeita a erro humano.
+>
+> Como validar: Perguntar ao time se, nos casos em que a instrução já chega organizada
+> (modelo ou planilha), a taxa de erro de conferência cai. Se cair, Hipótese 1 ganha força.
+> Se não cair, Hipótese 2 é mais provável.
+>
+> Qual evidência falta: Não há registro hoje que separe taxa de erro por tipo de instrução
+> recebida (organizada vs livre). Essa é uma pergunta que deveria ter ido para a
+> discovery-questions e não foi.
+
+**Quando pular esta etapa:**
+Se a causa raiz for muito evidente e não houver hipótese alternativa plausível, registrar
+isso explicitamente: *"Não foi identificada hipótese concorrente plausível — causa raiz
+considerada de alta confiança."* Não forçar uma segunda hipótese artificial só para preencher
+o formato.
+
+**Impacto na recomendação:**
+Se "qual evidência falta" aponta uma lacuna relevante e não preenchida, isso pesa contra os
+critérios de prontidão no Passo 4 — uma causa raiz não diferenciada de uma alternativa
+plausível não deve sustentar uma recomendação de SEGUIR sem ressalva.
+
+### Passo 3 — Classificar o tipo de problema
+
+Classificar a demanda em uma das categorias abaixo, com base na hipótese mais provável
+identificada no Passo 2. A categoria muda a recomendação.
 
 | Tipo | Característica | Implicação |
 |---|---|---|
@@ -91,7 +136,7 @@ Classificar a demanda em uma das categorias abaixo. A categoria muda a recomenda
 | **Sintoma isolado** | A demanda já é a causa raiz — não há nada mais profundo | Pode seguir direto para avaliação de investimento |
 | **Demanda política** | Motivada por pressão ou urgência sem problema operacional claro | Avaliar com cautela — risco de investir em algo sem causa real |
 
-### Passo 3 — Avaliar se a demanda ataca a causa ou o sintoma
+### Passo 4 — Avaliar se a demanda ataca a causa ou o sintoma
 
 Comparar o que foi pedido (requisitos funcionais do business-analyst) com a causa raiz identificada.
 
@@ -108,7 +153,7 @@ Pode seguir, mas com recomendação explícita de tratar a causa em paralelo ou 
 A solução faz o problema parecer resolvido, mas a causa segue intacta e vai se manifestar
 de outra forma. Recomendação de não seguir como está — reformular a demanda primeiro.
 
-### Passo 4 — Verificar critérios de prontidão
+### Passo 5 — Verificar critérios de prontidão
 
 Antes de recomendar seguir, checar se a demanda está pronta para avançar:
 
@@ -121,7 +166,7 @@ Antes de recomendar seguir, checar se a demanda está pronta para avançar:
 Se 2 ou mais critérios falharem, a recomendação tende para NÃO SEGUIR ainda — não significa
 descartar a demanda, significa que falta resolver algo antes de investir tempo de discovery.
 
-### Passo 5 — Formular a recomendação
+### Passo 6 — Formular a recomendação
 
 A recomendação é sempre uma das três:
 
@@ -150,6 +195,13 @@ anterior ser tomada.
 
 ## Causa Raiz Identificada
 [Resultado da análise dos 5 porquês — 2-4 linhas]
+
+## Hipóteses Concorrentes
+
+**Hipótese 1:** [causa raiz candidata principal]
+**Hipótese 2:** [causa raiz alternativa, ou "não identificada — causa raiz de alta confiança"]
+**Como validar:** [teste mínimo que distingue entre as hipóteses]
+**Qual evidência falta:** [o que ainda não temos para confirmar]
 
 ## Tipo de Problema
 [Estrutural / Dado / Governança / Sintoma isolado / Demanda política]
@@ -198,6 +250,9 @@ Documento bem estruturado não significa causa raiz clara. São coisas diferente
 ## Checklist de qualidade
 
 - [ ] Causa raiz identificada com técnica explícita (5 porquês ou equivalente), não suposição
+- [ ] Pelo menos 2 hipóteses concorrentes consideradas, ou justificativa explícita de por que não há alternativa plausível
+- [ ] "Como validar" aponta um teste concreto, não uma reflexão genérica
+- [ ] "Qual evidência falta" identificado e, se relevante, refletido nos critérios de prontidão
 - [ ] Tipo de problema classificado entre as 5 categorias
 - [ ] Comparação clara entre o que foi pedido e o que resolveria a causa
 - [ ] Todos os 5 critérios de prontidão avaliados

@@ -1,0 +1,28 @@
+/* ============================================================
+   Raízen — Brand Kit para Documentation Publisher
+   Paleta derivada do logo oficial (Templates Raízen/*.pptx).
+   Cor primária amostrada do wordmark: #005859.
+   Otimizado para impressão A4 via Chromium headless (--print-to-pdf).
+   ============================================================ */
+
+:root {
+  --raizen-primaria: #005859;
+  --raizen-primaria-escura: #00403F;
+  --raizen-primaria-clara: #1C7A78;
+  --raizen-tint: #EAF1F1;
+  --raizen-tint-2: #F4F8F8;
+  --texto: #1A1A1A;
+  --texto-suave: #5A6A6A;
+  --linha: #D5E0E0;
+
+  --st-decisao: #2E7D32;
+  --st-risco: #C62828;
+  --st-alerta: #F9A825;
+  --st-pendencia: #6B7280;
+
+  --cf-alto: #2E7D32;
+  --cf-medio: #F9A825;
+  --cf-baixo: #C62828;
+}
+
+

@@ -165,6 +165,25 @@ ROI = (Economia Líquida Anual - Custo de Construção) / Custo de Construção
 
 Apresentar como proporção (ex: "3,8:1") e como percentual (ex: "380% no primeiro ano").
 
+**Alerta obrigatório — ROI conservador abaixo de 1:1:**
+
+Se o ROI do cenário conservador for menor que 1:1 (ou seja, a economia líquida não cobre o
+custo de construção dentro do primeiro ano), isso precisa ser **destacado de forma explícita**,
+nunca apresentado apenas como um número na tabela.
+
+Um ROI de "0,9:1" lido rápido pode passar a impressão de retorno positivo garantido — não é.
+Significa que, no cenário conservador, o investimento ainda não se pagou no primeiro ano.
+
+Quando isso ocorrer, adicionar logo abaixo da tabela de retorno um aviso no formato:
+
+> ⚠️ **No cenário conservador, o retorno é abaixo de 1:1** — o investimento não se paga
+> integralmente no primeiro ano só com a economia de horas. A recomendação de investir,
+> se houver, depende de outro fator (risco mitigado, valor estratégico, ou confiança de
+> que o cenário esperado é mais provável que o conservador) — não apenas do retorno financeiro.
+
+Este alerta é obrigatório sempre que o ROI conservador for < 1:1, mesmo que a recomendação
+final seja INVESTIR. A transparência sobre isso é mais importante do que a conclusão.
+
 **Sempre apresentar dois cenários:**
 
 | Cenário | Premissa |
@@ -250,6 +269,11 @@ do erro aumentar).
 | Payback | [X] meses | [X] meses |
 | ROI | [X]:1 | [X]:1 |
 
+[Se ROI conservador < 1:1, incluir aqui:]
+> ⚠️ **No cenário conservador, o retorno é abaixo de 1:1** — o investimento não se paga
+> integralmente no primeiro ano só com a economia de horas. [Completar com o fator que
+> justifica seguir mesmo assim, se a recomendação for INVESTIR ou INVESTIR COM RESSALVA.]
+
 ## Valor Não Financeiro
 - Risco mitigado: [descrição]
 - Valor estratégico: [descrição, se houver]
@@ -300,6 +324,7 @@ significativa. Sempre confirmar o perfil real antes de calcular.
 - [ ] Custo do processo atual inclui horas + custo evitado, quando aplicável
 - [ ] Custo de construção inclui manutenção, se a solução exigir
 - [ ] Dois cenários apresentados (conservador 50% / esperado 80%) — nunca só um
+- [ ] Se ROI conservador < 1:1, alerta explícito incluído — não apenas o número na tabela
 - [ ] Payback calculado e apresentado junto ao ROI
 - [ ] Valor não financeiro avaliado separadamente, com risco ou benefício nomeado especificamente
 - [ ] Recomendação é uma das três opções formais

@@ -1,0 +1,37 @@
+{
+  "marca": "Raízen",
+  "origem": "Extraído de Templates Raízen/*.pptx (logo) e amostragem de cor do wordmark oficial",
+  "cores": {
+    "primaria": "#005859",
+    "primaria_escura": "#00403F",
+    "primaria_clara": "#1C7A78",
+    "tint_fundo": "#EAF1F1",
+    "tint_fundo_2": "#F4F8F8",
+    "texto": "#1A1A1A",
+    "texto_suave": "#5A6A6A",
+    "linha": "#D5E0E0",
+    "branco": "#FFFFFF"
+  },
+  "status": {
+    "decisao": "#2E7D32",
+    "risco": "#C62828",
+    "alerta": "#F9A825",
+    "pendencia": "#6B7280"
+  },
+  "confianca": {
+    "alto": "#2E7D32",
+    "medio": "#F9A825",
+    "baixo": "#C62828"
+  },
+  "tipografia": {
+    "familia": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+    "titulo_h1": "22pt",
+    "titulo_h2": "14pt",
+    "corpo": "10.5pt",
+    "legenda": "8.5pt"
+  },
+  "logo": {
+    "principal": "raizen-logo.png",
+    "cor_logo": "#005859"
+  }
+}
